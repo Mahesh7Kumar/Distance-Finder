@@ -8,7 +8,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://distance-finder-eight.vercel.app', // Allow your frontend's origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  credentials: true, // Allow cookies and credentials
+}));
 app.use(express.json());
 
 // DB connection
