@@ -36,8 +36,8 @@ export const DistanceCheck: React.FC<{
   return (
     <div>
       <div className="grid grid-cols-2 gap-2 mb-3">
-        <Input label="Your Latitude" value={lat} onChange={e => setLat(parseFloat(e.target.value) || 0)} />
-        <Input label="Your Longitude" value={lon} onChange={e => setLon(parseFloat(e.target.value) || 0)} />
+        <Input type="number" label="Your Latitude" value={lat} onChange={e => setLat(parseFloat(e.target.value) )} />
+        <Input type="number" label="Your Longitude" value={lon} onChange={e => setLon(parseFloat(e.target.value) )} />
       </div>
       <div className="flex gap-2 mb-4">
         <Button onClick={showDistances}>Show Distances</Button>
