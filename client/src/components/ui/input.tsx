@@ -4,7 +4,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 
-export const Input: React.FC<Props> = ({ label, ...rest }) => (
+export const Input: React.FC<Props> = ({ label, type, ...rest }) => (
   <label className="block text-sm">
     {label && <div className="text-xs text-slate-300 mb-1">{label}</div>}
     <input
