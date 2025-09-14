@@ -58,7 +58,7 @@ export default function App() {
             <div className="space-y-2">
               <Input label="Name" value={newUser.name} onChange={e => setNewUser(prev => ({ ...prev, name: e.target.value }))} />
               <div className="grid grid-cols-2 gap-2">
-                <Input label="Latitude" value={newUser.latitude} onChange={e => setNewUser(prev => ({ ...prev, latitude: parseFloat(e.target.value) || 0 }))} />
+                <Input label="Latitude" value={newUser.latitude} onChange={e => setNewUser(prev => ({ ...prev, latitude: parseFloat(e.target.value)  }))} />
                 <Input label="Longitude" value={newUser.longitude} onChange={e => setNewUser(prev => ({ ...prev, longitude: parseFloat(e.target.value) || 0 }))} />
               </div>
               <div className="flex gap-2">
