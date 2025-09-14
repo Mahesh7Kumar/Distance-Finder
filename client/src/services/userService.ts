@@ -2,7 +2,7 @@ import axios from "axios"
 import type { IUser } from '../types'
 
 const API = axios.create({
-    baseURL: (import.meta.env.VITE_API_BASE || "https://distance-finder.onrender.com/api") + "/users"
+    baseURL: (import.meta.env.VITE_API_BASE || "https://distance-finder.onrender.com") + "/api/users"
 });
 
 export const getUsers = async() : Promise<IUser[]> =>{
@@ -22,6 +22,6 @@ export const deleteUser = async(id:string) : Promise<void>=>{
 };
 
 export const getDistances = async (latitude: number, longitude: number) => {
-  const r = await axios.post((import.meta.env.VITE_API_BASE || "http://localhost:4000/api") + "/users/distance", { latitude, longitude });
+  const r = await axios.post((import.meta.env.VITE_API_BASE || "https://distance-finder.onrender.com") + "/api/users/distance", { latitude, longitude });
   return r.data;
 };
