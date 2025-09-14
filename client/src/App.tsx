@@ -108,10 +108,10 @@ export default function App() {
         <Modal open={!!editUser && modalOpen} onClose={() => { setEditUser(null); setModalOpen(false); }} title="Edit User">
           {editUser && (
             <div className="space-y-3">
-              <Input label="Name" value={editUser.name} onChange={e => setEditUser({ ...editUser, name: e.target.value })} />
+              <Input type="text" label="Name" value={editUser.name} onChange={e => setEditUser({ ...editUser, name: e.target.value })} />
               <div className="grid grid-cols-2 gap-2">
-                <Input label="Latitude" value={editUser.latitude} onChange={e => setEditUser({ ...editUser, latitude: parseFloat(e.target.value) || 0 })} />
-                <Input label="Longitude" value={editUser.longitude} onChange={e => setEditUser({ ...editUser, longitude: parseFloat(e.target.value) || 0 })} />
+                <Input type="number" label="Latitude" value={editUser.latitude} onChange={e => setEditUser({ ...editUser, latitude: parseFloat(e.target.value)  })} />
+                <Input type="number" label="Longitude" value={editUser.longitude} onChange={e => setEditUser({ ...editUser, longitude: parseFloat(e.target.value) })} />
               </div>
               <div className="flex gap-2">
                 <Button onClick={saveEdit}>Save</Button>
