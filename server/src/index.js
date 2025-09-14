@@ -9,10 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://distance-finder-wupx.vercel.app/', // Allow your frontend's origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-  credentials: true, // Allow cookies and credentials
+  origin: 'https://distance-finder-wupx.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 app.use(express.json());
 
