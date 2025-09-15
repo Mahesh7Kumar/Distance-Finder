@@ -22,6 +22,6 @@ export const deleteUser = async(id:string) : Promise<void>=>{
 };
 
 export const getDistances = async (latitude: number, longitude: number) => {
-  const r = await axios.post((import.meta.env.VITE_API_BASE) + "/api/users/distance", { latitude, longitude });
+  const r = await axios.post((import.meta.env.VITE_API_BASE || "https://distance-finder.onrender.com") + "/api/users/distance", { latitude, longitude });
   return r.data;
 };
