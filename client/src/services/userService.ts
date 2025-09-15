@@ -2,7 +2,7 @@ import axios from "axios"
 import type { IUser } from '../types'
 
 const API = axios.create({
-    baseURL: (import.meta.env.VITE_API_BASE || "https://distance-finder.onrender.com") + "/api/users"
+    baseURL: (import.meta.env.VITE_API_BASE) + "/api/users"
 });
 
 export const getUsers = async() : Promise<IUser[]> =>{
