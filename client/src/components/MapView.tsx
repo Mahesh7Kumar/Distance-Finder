@@ -37,7 +37,7 @@ export const MapView: React.FC<Props> = ({ center, users, maxRadiusKm = 30 }) =>
         <circle cx={cx} cy={cy} r={maxRadiusKm * scale} fill="rgba(255,100,150,0.08)" stroke="rgba(255,100,150,0.25)" strokeWidth={2} />
         {/* center point */}
         <circle cx={cx} cy={cy} r={8} fill="#ff5c8a" />
-        <text x={cx + 12} y={cy - 12} fontSize={21} fill="#ff9fb5">You</text>
+        <text x={cx + 12} y={cy - 12} fontSize={18} fill="#ff9fb5">You</text>
 
         {/* users */}
         {data.map(u => {
@@ -47,7 +47,7 @@ export const MapView: React.FC<Props> = ({ center, users, maxRadiusKm = 30 }) =>
             <g key={u._id}>
               <line x1={cx} y1={cy} x2={p.x} y2={p.y} stroke="rgba(255,255,255,0.06)" />
               <circle cx={p.x} cy={p.y} r={small} fill="#8bd3ff" stroke="#7cc0ff" />
-              <text x={p.x + 8} y={p.y - 6} fontSize={21} fill="#cfefff">{u.name} ({p.dist.toFixed(2)} km)</text>
+              <text x={p.x + 8} y={p.y - 6} fontSize={18} fill="#cfefff">{u.name} ({p.dist.toFixed(2)} km)</text>
             </g>
           );
         })}
